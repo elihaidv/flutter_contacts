@@ -703,7 +703,7 @@ public class ContactsServicePlugin implements MethodCallHandler, FlutterPlugin, 
     }
   }
 
-  private boolean addContact(Contact contact){
+  public boolean addContact(Contact contact){
 
     ArrayList<ContentProviderOperation> ops = new ArrayList<>();
 
