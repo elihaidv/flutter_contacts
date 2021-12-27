@@ -58,7 +58,7 @@ public class Contact implements Comparable<Contact> {
     }
 
     @SuppressWarnings("unchecked")
-    static Contact fromMap(HashMap map) {
+    static public Contact fromMap(HashMap map) {
         Contact contact = new Contact();
         contact.identifier = (String) map.get("identifier");
         contact.givenName = (String) map.get("givenName");
