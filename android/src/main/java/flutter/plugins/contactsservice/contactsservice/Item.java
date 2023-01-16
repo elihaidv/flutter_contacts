@@ -39,8 +39,12 @@ public class Item {
 
     public static String getPhoneLabel(Resources resources, int type, Cursor cursor, boolean localizedLabels) {
         if (localizedLabels) {
-            CharSequence localizedLabel = CommonDataKinds.Phone.getTypeLabel(resources, type, "");
-            return localizedLabel.toString().toLowerCase();
+            try {
+                CharSequence localizedLabel = CommonDataKinds.Phone.getTypeLabel(resources, type, "");
+                return localizedLabel.toString().toLowerCase();
+            } catch (Exception e){
+                return ""
+            }
         } else {
             switch (type) {
                 case CommonDataKinds.Phone.TYPE_HOME:
@@ -71,8 +75,12 @@ public class Item {
 
     public static String getEmailLabel(Resources resources, int type, Cursor cursor, boolean localizedLabels) {
         if (localizedLabels) {
-            CharSequence localizedLabel = CommonDataKinds.Email.getTypeLabel(resources, type, "");
-            return localizedLabel.toString().toLowerCase();
+            try {
+                CharSequence localizedLabel = CommonDataKinds.Email.getTypeLabel(resources, type, "");
+                return localizedLabel.toString().toLowerCase();
+            } catch (Exception e){
+                return ""
+            }
         } else {
             switch (type) {
                 case CommonDataKinds.Email.TYPE_HOME:
