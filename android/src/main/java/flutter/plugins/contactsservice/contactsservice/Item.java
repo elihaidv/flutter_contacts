@@ -43,7 +43,7 @@ public class Item {
                 CharSequence localizedLabel = CommonDataKinds.Phone.getTypeLabel(resources, type, "");
                 return localizedLabel.toString().toLowerCase();
             } catch (Exception e){
-                return ""
+                return "";
             }
         } else {
             switch (type) {
@@ -79,7 +79,7 @@ public class Item {
                 CharSequence localizedLabel = CommonDataKinds.Email.getTypeLabel(resources, type, "");
                 return localizedLabel.toString().toLowerCase();
             } catch (Exception e){
-                return ""
+                return "";
             }
         } else {
             switch (type) {
