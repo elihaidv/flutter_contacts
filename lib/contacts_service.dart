@@ -239,7 +239,6 @@ class Contact {
     postalAddresses = (m["postalAddresses"] as List?)
         ?.map((m) => PostalAddress.fromMap(m))
         .toList();
-    avatar = m["avatar"];
     try {
       birthday = m["birthday"] != null ? DateTime.parse(m["birthday"]) : null;
     } catch (e) {
